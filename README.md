@@ -48,6 +48,19 @@ scientists['diffInDate'] = diffMonths
 #Converting the file to csv
 scientists.to_csv('scientists_clean.csv', index=False)
 
+
+Assignment 3
+```python
+#import all the dependencies, including seaborn and pyplot
+#using same data from the google drive about medicaid vs. non medicaid reimbursements
+#barplots were helpful at seeing differences and number of prescriptions, per state or reinbursement type.
+g = sns.barplot( "Total Amount Reimbursed", "State", data=drugsutil, order=pd.value_counts(drugsutil['State']).iloc[:10].index)
+#iloc[:10] helped show only 10 of the top selections
+#catplot showed some fo the numbers well, and it is possible to control different aspects of the chart
+#scatterplot was easy to generate and showed that large number of prescription of a drug didn't necessarily translate into reimbursement
+#charts showed a lot of prescriptions written for hydrocodon whcih is an opiod. While it had the most prescriptions, it didn't have the most reimbursements.
+#The highest reimbursements were for Risperidone, a mental health drug.
+
 ```
 
 
