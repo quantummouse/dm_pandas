@@ -62,6 +62,19 @@ g = sns.barplot( "Total Amount Reimbursed", "State", data=drugsutil, order=pd.va
 #The highest reimbursements were for Risperidone, a mental health drug.
 
 ```
+Assignment 4
+```python
+#Import another data set. In this case, I imported data set with only Ohio drug utilization medicaid data for year 2020. Drug_Utilization_2020_-_Ohio.csv
+#Merging was hard as Collab Notebooks have a limit on Ram and these data sets have millions of rows. So data set size matters in the Collab. 
+#I merged all the data , so now there would be more data with year 2020 and Ohio only , which would also generate more Null values. 
+result = pd.merge( drugsutil, drugsutil2020, how="outer")
+# There are many ways to do this - I found nulls and turned them into word "Missing" 
+np.count_nonzero(result.isnull()
+result.fillna('Missing')
+#I didn't delete the missing data as it would not add anything to the dataset in the future. If I were to delete rows with missing data, that's a lot of data gone.
+#Using a string to define it, I can later count them or exclude them by this value from any data counts or visualizations. 
+
+```
 
 
 ## Contributing
