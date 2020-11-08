@@ -75,7 +75,14 @@ result.fillna('Missing')
 #Using a string to define it, I can later count them or exclude them by this value from any data counts or visualizations. 
 
 ```
+Assignment 5
+```python
+#Imported data set, then converted one column to categorical variables - State. Converted another column to string - Labeler Code
+data['State'] = data.State.astype('category')
+data['Labeler Code'] = data['Labeler Code'].astype(str)
+#data.dtypes showed that the types were changed. 
 
+```
 
 ## Contributing
 It's an assignment.
